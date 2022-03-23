@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính 2 số</title>
+</head>
+
+<body>
+    <h1>Calculator </h1> <br />
+    <input type="number" id="number_1" placeholder="Enter number 1">
+    <input type="number" id="number_2" placeholder="Enter number 2">
+    <br /><br />
+
+    <button id="showMessage_1">Addition(+)</button>
+    <button id="showMessage_2">Subtraction(-)</button>
+    <button id="showMessage_3">Multiplycation(X)</button>
+    <button id="showMessage_4">Division(/)</button>
+    <br /><br />
+    <div id="result"></div>
+    <script>
+        let input_number_1 = document.getElementById("number_1");
+        let input_number_2 = document.getElementById("number_2");
+        let additionBtn = document.getElementById("showMessage_1");
+        let subtractionBtn = document.getElementById("showMessage_2");
+        let multipliBtn = document.getElementById("showMessage_3");
+        let divisionBtn = document.getElementById("showMessage_4");
+        let result = document.getElementById("result");
+        let firstnumber, secondnumber;
+        input_number_1.addEventListener('change', function () {
+            firstnumber = parseFloat(input_number_1.value);
+        });
+        input_number_2.addEventListener('change', function () {
+            secondnumber = parseFloat(input_number_2.value);
+        });
+        additionBtn.addEventListener('click', function () {
+            result.innerText = "Phép cộng = " + (firstnumber + secondnumber);
+        });
+        subtractionBtn.addEventListener('click', function () {
+            result.innerText = "Phép trừ = " + (firstnumber - secondnumber);
+        });
+        multipliBtn.addEventListener('click', function () {
+            result.innerText = "Phép nhân = " + (firstnumber * secondnumber);
+        });
+        divisionBtn.addEventListener('click', function () {
+            result.innerText = "Phép chia = " + (firstnumber / secondnumber);
+        });
+    </script>
+
+</body>
+
+</html>
